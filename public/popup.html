@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOOtheme Alchemy Suite</title>
+  <style>
+    body {
+      width: 350px;
+      min-height: 400px;
+      margin: 0;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .logo {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    
+    .title {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    
+    .subtitle {
+      font-size: 0.9em;
+      opacity: 0.9;
+    }
+    
+    .status {
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #10b981;
+    }
+    
+    .status-dot.inactive {
+      background: #ef4444;
+    }
+    
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .btn {
+      padding: 12px 16px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-1px);
+    }
+    
+    .btn-primary {
+      background: #3b82f6;
+      border-color: #3b82f6;
+    }
+    
+    .btn-primary:hover {
+      background: #2563eb;
+      border-color: #2563eb;
+    }
+    
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .quick-commands {
+      margin-top: 20px;
+    }
+    
+    .quick-commands h4 {
+      margin-bottom: 10px;
+      font-size: 0.9em;
+      opacity: 0.9;
+    }
+    
+    .command-btn {
+      display: block;
+      width: 100%;
+      padding: 8px 12px;
+      margin-bottom: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      color: white;
+      text-decoration: none;
+      font-size: 0.8em;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    
+    .command-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateX(5px);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">🚀</div>
+    <div class="title">YOOtheme Alchemy Suite</div>
+    <div class="subtitle">DOM Build Agent</div>
+  </div>
+  
+  <div class="status">
+    <div class="status-indicator">
+      <div class="status-dot" id="statusDot"></div>
+      <span id="statusText">Checking...</span>
+    </div>
+    <div id="pageInfo" style="font-size: 0.8em; opacity: 0.8;"></div>
+  </div>
+  
+  <div class="actions">
+    <button class="btn btn-primary" id="toggleAgent">Activate Build Agent</button>
+    <button class="btn" id="openInspector">Open DOM Inspector</button>
+    <button class="btn" id="showHistory">View Change History</button>
+  </div>
+  
+  <div class="quick-commands">
+    <h4>Quick Commands</h4>
+    <button class="command-btn" data-command="Add a banner at the top saying 'Welcome'">Add Welcome Banner</button>
+    <button class="command-btn" data-command="Hide all advertisements">Hide Ads</button>
+    <button class="command-btn" data-command="Change all buttons to green">Green Buttons</button>
+    <button class="command-btn" data-command="Add floating contact button">Contact Button</button>
+  </div>
+  
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
