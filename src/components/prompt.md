@@ -1,0 +1,1 @@
+ensure true 'intelligent dom modifying' via gemini builder agents -- ensure i can input my api key and it authenticate correctly, and continue working from that point as expected -- better than that even.. i should be able to be vague and it just act -- leaving the burden of description/clarity on me -- but the eagerness to act on every command given never deminishes.
